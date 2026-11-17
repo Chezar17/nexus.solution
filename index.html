@@ -76,7 +76,7 @@ img{display:block;max-width:100%}
 .lang button[aria-pressed="true"]{color:#fff}
 .lang .pill{position:absolute;top:3px;bottom:3px;left:3px;width:calc(50% - 3px);border-radius:999px;background:var(--blue);box-shadow:0 0 18px rgba(59,116,255,.6);transition:transform .5s var(--ease)}
 .lang[data-lang="id"] .pill{transform:translateX(100%)}
-.nav-cta{font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px;min-height:44px;padding:0 4px;border-bottom:1px solid transparent;transition:border-color .3s}
+.nav-cta{white-space:nowrap;font-family:var(--mono);font-size:11px;letter-spacing:.18em;text-transform:uppercase;display:flex;align-items:center;gap:10px;min-height:44px;padding:0 4px;border-bottom:1px solid transparent;transition:border-color .3s}
 .nav-cta:hover{border-color:var(--blue)}
 .nav-cta i{width:6px;height:6px;border-radius:50%;background:var(--blue);box-shadow:0 0 10px var(--blue);animation:blink 1.8s infinite}
 @keyframes blink{50%{opacity:.25}}
@@ -255,6 +255,7 @@ footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:2
 .nav-links a.nav-new::before{content:none}
 .nav-new{display:flex;align-items:center;gap:8px;color:var(--fg)!important}
 .nav-new em,.promo em{font-style:normal;font-size:9px;letter-spacing:.14em;padding:3px 7px;border-radius:999px;background:var(--blue);color:#fff;box-shadow:0 0 12px rgba(59,116,255,.6)}
+.hero-side .promo+.promo{margin-top:-14px}
 .promo{align-self:flex-start;display:inline-flex;align-items:center;gap:10px;padding:6px 14px 6px 6px;min-height:40px;border-radius:999px;border:1px solid rgba(143,176,255,.3);background:rgba(59,116,255,.08);font-family:var(--mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#C3D3FF;transition:border-color .3s,background .3s}
 .promo:hover{border-color:var(--blue);background:rgba(59,116,255,.16)}
 /* ---------- selected work ---------- */
@@ -359,7 +360,6 @@ img,svg{-webkit-user-drag:none;user-drag:none}
     <a href="#process" data-n="03" data-i18n="nav.process">Process</a>
     <a href="#why" data-n="04" data-i18n="nav.why">Approach</a>
     <a href="#contact" data-n="05" data-i18n="nav.contact">Contact</a>
-    <a href="cv-website/" class="nav-new"><span data-i18n="nav.cv">CV → Website</span><em data-i18n="nav.new">New</em></a>
   </nav>
   <div class="nav-right">
     <div class="lang" data-lang="en" role="group" aria-label="Language">
@@ -408,6 +408,7 @@ img,svg{-webkit-user-drag:none;user-drag:none}
     </h1>
     <div class="hero-side rv">
       <a class="promo" href="cv-website/"><em data-i18n="nav.new">New</em><span data-i18n="promo">Turn your CV into a personal website</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <a class="promo" href="digital-products/"><em data-i18n="nav.new">New</em><span data-i18n="promo2">What digital products sell in Indonesia</span><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
       <p data-i18n="hero.sub">Websites, software and automation — designed and engineered for businesses that intend to lead.</p>
       <div class="hero-actions">
         <a class="btn btn-solid magnetic" href="#contact"><span data-i18n="hero.cta">Start a project</span>
@@ -596,7 +597,7 @@ var SERVICES = [
 
 var T = {
   en:{
-    "nav.services":"Services","nav.cv":"CV → Website","nav.new":"New","promo":"Turn your CV into a personal website","nav.work":"Work","work.label":"Selected work","work.title":"Built, launched and live.","work.hint":"Pick a project to see it live, right here.","work.loading":"Loading preview","work.open":"Open live site","nav.process":"Process","nav.why":"Approach","nav.contact":"Contact","nav.cta":"Start a project",
+    "nav.services":"Services","nav.cv":"CV → Website","nav.dpa":"Product Analytics","promo2":"What digital products sell in Indonesia","nav.new":"New","promo":"Turn your CV into a personal website","nav.work":"Work","work.label":"Selected work","work.title":"Built, launched and live.","work.hint":"Pick a project to see it live, right here.","work.loading":"Loading preview","work.open":"Open live site","nav.process":"Process","nav.why":"Approach","nav.contact":"Contact","nav.cta":"Start a project",
     "hero.l1":"Where ideas connect","hero.l2a":"to","hero.l2b":"technology.",
     "hero.sub":"Websites, software and automation — designed and engineered for businesses that intend to lead.",
     "hero.cta":"Start a project","hero.cta2":"View services","hero.scroll":"SCROLL",
@@ -620,7 +621,7 @@ var T = {
     "wa":"Hi Nexus Solution, I'd like to discuss a project."
   },
   id:{
-    "nav.services":"Layanan","nav.cv":"CV → Website","nav.new":"Baru","promo":"Ubah CV jadi website pribadi","nav.work":"Portofolio","work.label":"Karya pilihan","work.title":"Dibangun, diluncurkan, dan sudah online.","work.hint":"Pilih proyek untuk melihatnya langsung di sini.","work.loading":"Memuat pratinjau","work.open":"Buka situs","nav.process":"Proses","nav.why":"Pendekatan","nav.contact":"Kontak","nav.cta":"Mulai proyek",
+    "nav.services":"Layanan","nav.cv":"CV → Website","nav.dpa":"Analitik Produk","promo2":"Produk digital yang laku di Indonesia","nav.new":"Baru","promo":"Ubah CV jadi website pribadi","nav.work":"Portofolio","work.label":"Karya pilihan","work.title":"Dibangun, diluncurkan, dan sudah online.","work.hint":"Pilih proyek untuk melihatnya langsung di sini.","work.loading":"Memuat pratinjau","work.open":"Buka situs","nav.process":"Proses","nav.why":"Pendekatan","nav.contact":"Kontak","nav.cta":"Mulai proyek",
     "hero.l1":"Tempat ide terhubung","hero.l2a":"dengan","hero.l2b":"teknologi.",
     "hero.sub":"Website, perangkat lunak, dan otomasi — dirancang dan dibangun untuk bisnis yang ingin memimpin.",
     "hero.cta":"Mulai proyek","hero.cta2":"Lihat layanan","hero.scroll":"GULIR",
